@@ -1,0 +1,57 @@
+ConvergenceStep 0
+PopulationSize 30.0
+MaxGenerations 1000.0
+DisjointCoefficient 2.0
+ExcessCoefficient 2.0
+WeightDifferenceCoefficient 1.0
+FitnessCoefficient 0.0
+CompatibilityThreshold 6.0 //set to value from jmc IEEE TEC experiments
+CompatibilityModifier 0.3 //set to value from jmc IEEE TEC experiments
+SpeciesSizeTarget 5.0    // jmc: this should be called NumSpeciesTarget, ~pop/8-15
+DropoffAge 15.0    //jmc: never punish a species for being old
+AgeSignificance 1.0
+SurvivalThreshold 1.0  //the fraction of a species allowed to reproduce (diff from IEEE TEC), jmc is guessing what a good number is
+MutateAddNodeProbability 0.03 //set to value from jmc IEEE TEC experiments
+MutateAddLinkProbability 0.05 //set to value from jmc IEEE TEC experiments
+MutateDemolishLinkProbability 0.03 //set to value from jmc IEEE TEC experiments
+MutateLinkWeightsProbability 0.8 //probability per org that any links will be mutated, set to IEEE TEC value
+MutateOnlyProbability 0.25 //set to value from jmc IEEE TEC experiments
+MutateLinkProbability 0.5  // if any links will be mutated (see MutateLinkWeightsProbability), this is the prob. that each link will be mutated. For IEEE TEC I had 0.1, but Ken recommends 0.8
+SmallestSpeciesSizeWithElitism 2.0 //jmc guessing a good number
+MutateSpeciesChampionProbability 0.0
+MutationPower 1.5			 // scales size of each link mutation. set to value from jmc IEEE TEC experiments
+AdultLinkAge 18.0  //set to value from jmc IEEE TEC experiments (18)
+AllowRecurrentConnections 0.0
+AllowAddNodeToRecurrentConnection 0.0
+AllowSelfRecurrentConnections 0.0
+ForceCopyGenerationChampion 1.0
+LinkGeneMinimumWeightForPhentoype 0.0
+GenerationDumpModulo 10.0
+RandomSeed -1.0
+ExtraActivationFunctions 1.0
+AddBiasToHiddenNodes 0.0
+SignedActivation 1.0
+ExtraActivationUpdates 9.0
+OnlyGaussianHiddenNodes 0.0
+OnlySigmoidHiddenNodes 0.0
+ExperimentType 43.0
+OnlySaveFinalPop 0
+
+BoundingBoxLength 10.0
+
+TournamentSize 2
+OnlyAllowElitesToBreed 0
+NeedToInjectFitnessValuesFromCommandLine 0
+StartVfFileIndexesAtOne 0
+SeedingSoDecrementByOne 0
+
+RecordEntireGenEvery 5
+
+NumMaterials 4.0  		// switch -M	(for material)	//  1-> actuated+, 2-> also soft passive, 3-> also actuated-, 4-> also stiff passive
+PenaltyType 5.0  		// switch -P	(for penalty)   //  0-> no penalty, 1->total voxels, 2->actuated voxels, 3->connections (all linear) 5-> numConductive
+FixedBoundingBoxSize 10.0    	// 0-> voxel size is fixed, bounding box increases with numVoxels,  N -> (ex. 5 or 10) bounding box size is fixed at size it would be with N voxels per side, resolution increases with smaller voxels
+MaxStiffness 50.0
+PenaltyExp 1.0
+HasObstacles 0.0		//0-> no obstacles; 1->Concentric Circular Obstacles
+SimulationTime 0.5		//Time in seconds that we run the simulation/evaluation in Voxelyze
+NumPacemaker 0
